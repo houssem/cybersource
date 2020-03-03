@@ -12,7 +12,7 @@ public class AuthCaptureSampleTest {
 	private static final Logger log = LoggerFactory.getLogger(AuthCaptureSampleTest.class);
 	private static final SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
 
-	//@Test
+	@Test
 	public void shouldAcceptAuthorize() throws Exception {
 
 		String merchantReferenceCode = df.format(new Date());

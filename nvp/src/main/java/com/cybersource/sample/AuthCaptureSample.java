@@ -88,11 +88,11 @@ public class AuthCaptureSample {
 		// request.put( "shipTo_country", "US" );
 
 		// request.put( "card_accountNumber", "4012001037141112" );
-		request.put( "card_accountNumber", "5200000000000007" );
+		request.put( "card_accountNumber", "4111111111111111" );
 		request.put( "card_expirationMonth", "12" );
 		request.put( "card_expirationYear", "2021" );
 
-		request.put( "purchaseTotals_currency", "THB" );
+		request.put( "purchaseTotals_currency", "AED" );
 
 		// there are two items in this sample
 		request.put( "item_0_productName", "KFLTFDIV" );

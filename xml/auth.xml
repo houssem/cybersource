@@ -22,7 +22,7 @@
 		<city>Bang Phongphang</city>
 		<state>BKK</state>
 		<postalCode>10120</postalCode>
-		<country>TH</country>
+		<country>AE</country>
 	</shipTo>
 	<item id="0">
 		<unitPrice>12.34</unitPrice>
@@ -31,12 +31,12 @@
 		<unitPrice>56.78</unitPrice>
 	</item>
 	<purchaseTotals>
-		<currency>THB</currency>
+		<currency>AED</currency>
 	</purchaseTotals>
 	<card>
-		<accountNumber>4012001037141112</accountNumber>
+		<accountNumber>4111111111111111</accountNumber>
 		<expirationMonth>02</expirationMonth>
-		<expirationYear>2020</expirationYear>
+		<expirationYear>2021</expirationYear>
 	</card>
 	<ccAuthService run="true" />
 </requestMessage>

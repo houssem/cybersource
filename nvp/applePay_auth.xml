@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<requestMessage xmlns="_NSURI_">
+    <!-- The sample code will replace _NSURI_ with the actual namespace URI. -->
+    <!-- We will let the XMLClient insert the merchantID.                    -->
+    <merchantReferenceCode>201703030003</merchantReferenceCode>
+    <billTo>
+        <firstName>Krungsri</firstName>
+        <lastName>Simple</lastName>
+        <street1>1222 Rama III Road</street1>
+        <city>Bang Phongphang</city>
+        <state>BKK</state>
+        <postalCode>10120</postalCode>
+        <country>TH</country>
+        <phoneNumber>662-296-2000</phoneNumber>
+        <email>junlapong@gmail.com</email>
+        <ipAddress>127.0.0.1</ipAddress>
+    </billTo>
+    <purchaseTotals>
+        <currency>AED</currency>
+        <grandTotalAmount>15.00</grandTotalAmount>
+    </purchaseTotals>
+    <encryptedPayment>
+        <descriptor>RklEPUNPTU1PTi5BUFBMRS5JTkFQUC5QQVlNRU5U</descriptor>
+        <data>ABCDEFabcdefABCDEFabcdef0987654321234567</data>
+        <encoding>Base64</encoding>
+    </encryptedPayment>
+    <card>
+        <cardType>001</cardType>
+    </card>
+    <ccAuthService run="true"/>
+    <paymentSolution>001</paymentSolution>
+</requestMessage>

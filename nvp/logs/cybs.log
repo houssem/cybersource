@@ -1,0 +1,171 @@
+2020-03-02 23:23:55.314 main FILESTART> CYBERSOURCE LOG FILE
+
+2020-03-02 23:23:55.315 main TRANSTART> =======================================
+2020-03-02 23:23:55.315 main MERCHCFG > merchantID=ni_200200000661_aed, keysDirectory=/home/houssem/hybris_projects/maf/maf.sap.cloud.commerce/core-customize/hybris/bin/custom/maf/mafpayment/resources/keys, keyAlias=ni_200200000661_aed, keyPassword=Password2019, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.18, keyFilename=that_200200000661_aed, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=false
+2020-03-02 23:23:55.336 main REQUEST  > 
+UUID   >  9379afc5-3e37-443c-a998-1a9f74c65e8e
+Input request is
+======================================= 
+billTo_city=Yannawa
+purchaseTotals_currency=AED
+billTo_email=custxxxxxxxxx.com
+item_0_productSKU=SKU00
+clientLibrary=Java Basic
+invoiceHeader_merchantDescriptor=TMN Wallet Utility Bill
+billTo_country=TH
+item_1_quantity=100
+billTo_lastName=xxxxxx
+billTo_street1=1222xxxxxxxxxxxxxxxxxxxxxxxxxhang
+item_1_productName=KFLTFD70
+clientLibraryVersion=6.2.7
+ccAuthService_run=true
+item_1_productSKU=SKU01
+clientEnvironment=Linux/4.15.0-62-generic/Ubuntu/11.0.4
+card_accountNumber=4111xxxxxxxx1111
+item_0_quantity=100
+merchantReferenceCode=20200302232355
+item_1_unitPrice=5.72
+billTo_postalCode=10210
+billTo_firstName=xxxxxxxx
+billTo_state=Bangkok
+card_expirationMonth=xx
+item_0_unitPrice=10.00
+merchantID=ni_200200000661_aed
+billTo_ipAddress=10.7.7.7
+item_0_productName=KFLTFDIV
+card_expirationYear=xxxx
+billTo_phoneNumber=+6xxxxxxx00
+
+2020-03-02 23:23:55.342 main INFO     > Client, End of soapWrap   28ms
+2020-03-02 23:23:55.705 main INFO     > Loading the certificate from p12 file 
+2020-03-02 23:23:56.010 main INFO     > Client, End of loading Merchant Certificates 667ms
+2020-03-02 23:23:56.010 main INFO     > Signing request...
+2020-03-02 23:23:56.175 main INFO     > Client, End of createSignedDoc   166ms
+2020-03-02 23:23:56.176 main INFO     > Using HttpURLConnection for connections.
+2020-03-02 23:23:57.714 main INFO     > Sending 4406 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2020-03-02 23:23:57.714 main INFO     > Reading response...
+2020-03-02 23:23:58.363 main INFO     > Parsing response...
+2020-03-02 23:23:58.367 main REPLY    > 
+purchaseTotals_currency=AED
+ccAuthReply_processorResponse=00
+ccAuthReply_avsCode=Y
+afsReply_reasonCode=100
+ccAuthReply_reasonCode=100
+decision=ACCEPT
+merchantReferenceCode=20200302232355
+ccAuthReply_authorizationCode=xxxxxx
+afsReply_consumerLocalTime=5:23:57
+afsReply_afsResult=95
+ccAuthReply_reconciliationID=5831878377876258104009
+afsReply_velocityInfoCode=VELV-EM
+afsReply_suspiciousInfoCode=RISK-SD^RISK-TB
+afsReply_afsFactorCode=B^D^Z
+afsReply_hostSeverity=5
+ccAuthReply_amount=1572.00
+requestID=5831878377876258104009
+afsReply_addressInfoCode=MM-BIN^UNV-ADDR
+ccAuthReply_authorizedDateTime=2020-03-02T22:23:58Z
+afsReply_internetInfoCode=FREE-EM^RISK-EM
+ccAuthReply_avsCodeRaw=Y
+reasonCode=100
+
+2020-03-02 23:23:58.367 main INFO     > Client, End of runTransaction Call   3053ms
+
+2020-03-03 10:34:10.327 main TRANSTART> =======================================
+2020-03-03 10:34:10.328 main MERCHCFG > merchantID=ni_200200000661_aed, keysDirectory=/home/houssem/hybris_projects/maf/maf.sap.cloud.commerce/core-customize/hybris/bin/custom/maf/mafpayment/resources/keys, keyAlias=ni_200200000661_aed, keyPassword=Password2019, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.18, keyFilename=that_200200000661_aed, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=false
+2020-03-03 10:34:10.362 main REQUEST  > 
+UUID   >  e26f9f13-6980-4428-817f-ed32dd500d51
+Input request is
+======================================= 
+billTo_city=Yannawa
+purchaseTotals_currency=AED
+billTo_email=housxxxxxxxxxxxxxxx.com
+encryptedPayment_descriptor=RklExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxRU5U
+clientLibrary=Java Basic
+merchantReferenceCode=20200303103410
+invoiceHeader_merchantDescriptor=TMN Wallet Utility Bill
+billTo_country=AE
+billTo_lastName=xxxxxx
+billTo_street1=1222xxxxxxxxxxxxxxxxxxxxxxxxxhang
+billTo_postalCode=10210
+clientLibraryVersion=6.2.7
+ccAuthService_run=true
+purchaseTotals_grandTotalAmount=50.50
+billTo_firstName=xxxxxxxx
+billTo_state=Bangkok
+card_cardType=xxx
+paymentSolution=xxx
+merchantID=ni_200200000661_aed
+billTo_ipAddress=10.7.7.7
+clientEnvironment=Linux/4.15.0-62-generic/Ubuntu/11.0.4
+encryptedPayment_encoding=xxxxxx
+billTo_phoneNumber=+6xxxxxxx00
+encryptedPayment_data=ABCDxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx4567
+
+2020-03-03 10:34:10.368 main INFO     > Client, End of soapWrap   41ms
+2020-03-03 10:34:10.675 main INFO     > Loading the certificate from p12 file 
+2020-03-03 10:34:11.031 main INFO     > Client, End of loading Merchant Certificates 664ms
+2020-03-03 10:34:11.031 main INFO     > Signing request...
+2020-03-03 10:34:11.186 main INFO     > Client, End of createSignedDoc   155ms
+2020-03-03 10:34:11.187 main INFO     > Using HttpURLConnection for connections.
+2020-03-03 10:34:12.538 main INFO     > Sending 4379 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2020-03-03 10:34:12.539 main INFO     > Reading response...
+2020-03-03 10:34:13.064 main INFO     > Parsing response...
+2020-03-03 10:34:13.070 main REPLY    > 
+ccAuthReply_reasonCode=101
+decision=REJECT
+requestID=5832280526136251804010
+merchantReferenceCode=20200303103410
+reasonCode=101
+missingField_0=card_accountNumber
+
+2020-03-03 10:34:13.070 main INFO     > Client, End of runTransaction Call   2744ms
+
+2020-03-03 10:35:45.631 main TRANSTART> =======================================
+2020-03-03 10:35:45.632 main MERCHCFG > merchantID=ni_200200000661_aed, keysDirectory=/home/houssem/hybris_projects/maf/maf.sap.cloud.commerce/core-customize/hybris/bin/custom/maf/mafpayment/resources/keys, keyAlias=ni_200200000661_aed, keyPassword=Password2019, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.18, keyFilename=that_200200000661_aed, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=false
+2020-03-03 10:35:45.649 main REQUEST  > 
+UUID   >  6ee64fe6-22ba-4b93-99c8-cdbe5dcaea53
+Input request is
+======================================= 
+billTo_city=Yannawa
+purchaseTotals_currency=AED
+billTo_email=housxxxxxxxxxxxxxxx.com
+encryptedPayment_descriptor=RklExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxRU5U
+clientLibrary=Java Basic
+merchantReferenceCode=20200303103545
+billTo_country=AE
+billTo_lastName=xxxxxx
+billTo_street1=1222xxxxxxxxxxxxxxxxxxxxxxxxxhang
+billTo_postalCode=10210
+clientLibraryVersion=6.2.7
+ccAuthService_run=true
+purchaseTotals_grandTotalAmount=50.50
+billTo_firstName=xxxxxxxx
+billTo_state=Bangkok
+card_cardType=xxx
+paymentSolution=xxx
+merchantID=ni_200200000661_aed
+billTo_ipAddress=10.7.7.7
+clientEnvironment=Linux/4.15.0-62-generic/Ubuntu/11.0.4
+encryptedPayment_encoding=xxxxxx
+billTo_phoneNumber=+6xxxxxxx00
+encryptedPayment_data=ABCDxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx4567
+
+2020-03-03 10:35:45.654 main INFO     > Client, End of soapWrap   23ms
+2020-03-03 10:35:45.980 main INFO     > Loading the certificate from p12 file 
+2020-03-03 10:35:46.290 main INFO     > Client, End of loading Merchant Certificates 636ms
+2020-03-03 10:35:46.291 main INFO     > Signing request...
+2020-03-03 10:35:46.487 main INFO     > Client, End of createSignedDoc   197ms
+2020-03-03 10:35:46.489 main INFO     > Using HttpURLConnection for connections.
+2020-03-03 10:35:47.702 main INFO     > Sending 4322 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2020-03-03 10:35:47.702 main INFO     > Reading response...
+2020-03-03 10:35:48.189 main INFO     > Parsing response...
+2020-03-03 10:35:48.197 main REPLY    > 
+ccAuthReply_reasonCode=101
+decision=REJECT
+requestID=5832281477746204504012
+merchantReferenceCode=20200303103545
+reasonCode=101
+missingField_0=card_accountNumber
+
+2020-03-03 10:35:48.197 main INFO     > Client, End of runTransaction Call   2566ms

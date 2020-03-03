@@ -1,5 +1,3 @@
-/* Copyright 2003-2004 CyberSource Corporation */
-
 package com.cybersource.sample;
 
 import java.io.ByteArrayInputStream;
@@ -23,9 +21,9 @@ import com.cybersource.ws.client.XMLClient;
  * Sample class that demonstrates how to call Credit Card Authorization using
  * the XML client.
  */
-public class AuthSample {
+public class ApplePayAuthSample {
 
-	private static final Logger log = LoggerFactory.getLogger(AuthSample.class);
+	private static final Logger log = LoggerFactory.getLogger(ApplePayAuthSample.class);
 
 	/**
 	 * Entry point.
@@ -38,7 +36,7 @@ public class AuthSample {
 	 *            directory.
 	 */
 	public static void main(String[] args) {
-		
+
 		// read in properties file.
 		Properties props = Utility.readProperties(args);
 		log.debug("merchantID: {}", props.getProperty("merchantID"));
@@ -46,7 +44,9 @@ public class AuthSample {
 		// read in input XML file, replacing _NSURI_ (if any) with the
 		// effective namespace URI. See header comment for the method
 		// readRequest() for more information.
-		Document request = readRequest(props, args);
+		String [] arguments = {"#", "applePay_auth_cyberSource_Decrypt.xml"};
+		// String [] arguments = {"applePay_auth_cyberSource_Decrypt.xml"};
+		Document request = readRequest(props, arguments);
 		if (request == null) {
 			return;
 		}
@@ -56,7 +56,7 @@ public class AuthSample {
 		// the request document.
 
 		try {
-			
+
 			displayDocument("CREDIT CARD AUTHORIZATION REQUEST:", request);
 
 			// run transaction now
@@ -64,7 +64,7 @@ public class AuthSample {
 
 			// System.out.println(reply);
 			displayDocument("CREDIT CARD AUTHORIZATION REPLY:", reply);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
@@ -89,21 +89,21 @@ public class AuthSample {
 	 * @return Document object.
 	 */
 	private static Document readRequest(Properties props, String[] commandLineArgs) {
-		
+
 		Document doc = null;
 
 		try {
-			
+
 			// read in the XML file
-			String filename = commandLineArgs.length > 1 ? commandLineArgs[1] : "auth.xml";
+			String filename = commandLineArgs.length > 1 ? commandLineArgs[1] : "applePay_auth.xml";
 			byte[] xmlBytes = Utility.read(filename);
 
 			// replace _NSURI_ (if any) with effective namespace URI.
 			String xmlString = new String(xmlBytes, "UTF-8");
 			int pos = xmlString.indexOf("_NSURI_");
-			
+
 			if (pos != -1) {
-				
+
 				StringBuilder sb = new StringBuilder(xmlString);
 				String namespaceURI = XMLClient.getEffectiveNamespaceURI(props, null);
 
@@ -118,7 +118,7 @@ public class AuthSample {
 			DocumentBuilder builder = dbf.newDocumentBuilder();
 			doc = builder.parse(bais);
 			bais.close();
-			
+
 		} catch (ClientException e) {
 			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
@@ -148,3 +148,4 @@ public class AuthSample {
 		log.debug("\n{}\n{}", header, util.XmlUtil.format(Utility.nodeToString(doc)));
 	}
 }
+
